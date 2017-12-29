@@ -10,7 +10,7 @@
   <artifactId>esourcej-core</artifactId>
   <packaging>jar</packaging>
   <version>0.0-SNAPSHOT</version>
-  <name>esourcej</name>
+  <name>esourcej-core</name>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
