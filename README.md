@@ -1,4 +1,4 @@
-esourcej [![Build Status](https://travis-ci.org/esourcej/esourcej.svg?branch=master)](https://travis-ci.org/esourcej/esourcej)
+esourcej [![Build Status](https://circleci.com/gh/esourcej/esourcej.svg)](https://circleci.com/gh/esourcej/esourcej)
 ========
 
 Event-sourcing framework for Java.
