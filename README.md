@@ -8,7 +8,7 @@ Event-sourcing framework for Java.
 - No third party code in domain/app package - no interfaces implementation / extending abstract classes needed.
   Even annotations class could be totally custom and user-defined. Of course ready to use classes / annotations are 
   provided, ready to use.
-- Fully functional command/event handlers - `static` methods are prefered.
+- Fully functional command/event handlers - `static` methods are preferred, no side effects in main flow.
 - Easy to extend - everything is encapsulated using well-defined interfaces which default implementations are provided. 
   It's easy to write own implementation in order to use custom infrastructure / tooling / AOP.
 - Testing friendly - deticated package includes testing tools like matchers, builders, in-memory implementations 
