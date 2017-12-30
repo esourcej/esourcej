@@ -10,12 +10,16 @@ Event-sourcing framework for Java.
 // Account.java
 class Account {
     
-    class CreateCommand { public String name; public BigInteger balance; }
-    class PayBill { public String name; public BigInteger balance; }
+    class Command {}
     
-    class CreatedEvent { public String name; public BigInteger balance; } 
-    class BillPaidEvent { public String billId; public BigInteger amount; } 
-    class BillPayFailedEvent { 
+    class CreateCommand extends Command { public String name; public BigInteger balance; }
+    class PayBillCommand extends Command { public String name; public BigInteger balance; }
+    
+    class Event {}
+    
+    class CreatedEvent extends Event { public String name; public BigInteger balance; } 
+    class BillPaidEvent extends Event { public String billId; public BigInteger amount; } 
+    class BillPayFailedEvent extends Event { 
         public enum REASON { NO_ENOUGH_MONEY };
         
         public REASON reason; public String billId; public BigInteger amount;
@@ -24,9 +28,9 @@ class Account {
     class State { public String name; public BigInteger balance; }
     
     @CommandHandler
-    static List<Object> handle(CreateCommand command)
+    static List<Event> handle(CreateCommand command)
     {
-        CreatedEvent event = new CreatedEvent();
+        Event event = new CreatedEvent();
         
         event.name = command.name;
         event.balance = command.balance;
@@ -37,7 +41,7 @@ class Account {
     @EventHandler
     static State handle(CreatedEvend event)
     {
-        new State;
+        State state = new State();
         
         state.name = event.name;
         state.balance = event.balance;
