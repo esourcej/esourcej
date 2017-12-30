@@ -13,10 +13,10 @@ import static org.hamcrest.CoreMatchers.*;
 
 abstract public class EventStoreTest {
 
-    class EventImpl extends Event {}
+    private class EventImpl extends Event {}
 
-    protected EventStore eventStore;
-    protected String guid = java.util.UUID.randomUUID().toString();
+    EventStore eventStore;
+    private  String guid = java.util.UUID.randomUUID().toString();
 
     @Before
     public void setUp() throws Exception {
