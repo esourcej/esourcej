@@ -49,6 +49,23 @@ class Account {
         return state;
     }
 }
-
-
 ```
+
+### Plays with others
+
+Framework works very well with:
+
+- [Spring - HTTP / MVC Framework](https://spring.io)
+- [EventStore - store for events with fencing](https://eventstore.org)
+- [RabbitMQ - messaging and queuing events and commands](https://www.rabbitmq.com)
+- [Immutables - great immutebles for java with simple API](https://immutables.github.io)
+- Much much more - interfaces are easy to implement (`EventStore`, `StateProvider` etc)
+
+### Made with ♥ to Open Source
+
+Project is inspired by:
+
+- [AxonFramework - great``e` Event sourcing framework](http://www.axonframework.org)
+- [EventStore](https://eventstore.org)
+
+Thanks for your contributions!
