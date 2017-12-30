@@ -75,8 +75,8 @@ Framework works very well with:
 
 ### Inspiration
 
+- [A Functional Foundation for CQRS/ES](http://verraes.net/2014/05/functional-foundation-for-cqrs-event-sourcing/)
 - [AxonFramework - great Event sourcing framework](http://www.axonframework.org)
 - [EventStore](https://eventstore.org)
-- [A Functional Foundation for CQRS/ES](http://verraes.net/2014/05/functional-foundation-for-cqrs-event-sourcing/)
 
 Thanks for your contributions!
