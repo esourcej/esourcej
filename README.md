@@ -3,6 +3,18 @@ esourcej [![Build Status](https://circleci.com/gh/esourcej/esourcej.svg)](https:
 
 Event-sourcing framework for Java.
 
+### Main features
+
+- No third party code in domain/app package - no interfaces implementation / extending abstract classes needed.
+  Even annotations class could be totally custom and user-defined. Of course ready to use classes / annotations are 
+  provided, ready to use.
+- Fully functional command/event handlers - `static` methods are prefered.
+- Easy to extend - everything is encapsulated using well-defined interfaces which default implementations are provided. 
+  It's easy to write own implementation in order to use custom infrastructure / tooling / AOP.
+- Testing friendly - deticated package includes testing tools like matchers, builders, in-memory implementations 
+  which make functional tests fast, portable, easy to write and maintain
+- Easy configuration - builder which produces ready to use `CommandGateway` connected to `EventStore`, `MessageBroker` etc
+
 ### Overview
 
 ```java
@@ -57,15 +69,14 @@ Framework works very well with:
 
 - [Spring - HTTP / MVC Framework](https://spring.io)
 - [EventStore - store for events with fencing](https://eventstore.org)
-- [RabbitMQ - messaging and queuing events and commands](https://www.rabbitmq.com)
+- [RabbitMQ - messaging and queuing](https://www.rabbitmq.com)
 - [Immutables - great immutebles for java with simple API](https://immutables.github.io)
 - Much much more - interfaces are easy to implement (`EventStore`, `StateProvider` etc)
 
-### Made with ♥ to Open Source
+### Inspiration
 
-Project is inspired by:
-
-- [AxonFramework - great``e` Event sourcing framework](http://www.axonframework.org)
+- [AxonFramework - great Event sourcing framework](http://www.axonframework.org)
 - [EventStore](https://eventstore.org)
+- [A Functional Foundation for CQRS/ES](http://verraes.net/2014/05/functional-foundation-for-cqrs-event-sourcing/)
 
 Thanks for your contributions!
