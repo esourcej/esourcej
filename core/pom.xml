@@ -8,7 +8,7 @@
   </parent>
   <groupId>org.esourcej.core</groupId>
   <artifactId>esourcej-core</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>0.0-SNAPSHOT</version>
   <name>esourcej-core</name>
   <dependencies>
