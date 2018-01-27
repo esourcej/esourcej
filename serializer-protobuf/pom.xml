@@ -26,11 +26,11 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.esourcej.core</groupId>
-            <artifactId>esourcej-core</artifactId>
-            <!-- @todo Use const-->
-            <version>0.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.esourcej.core</groupId>-->
+            <!--<artifactId>esourcej-core</artifactId>-->
+            <!--&lt;!&ndash; @todo Use const&ndash;&gt;-->
+            <!--<version>0.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>
