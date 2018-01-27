@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package yomi;
+
+option java_package = "org.esourcej.event.serializer.protobuf.fixture";
+option java_outer_classname = "Protocool";
+
+message Product {
+    required string name = 1;
+    required uint64 price = 2;
+}
+
+message CreateProduct {
+    required string id = 1;
+
+    required Product product = 2;
+}
+
+message RemoveProduct {
+    required string id = 1;
+}

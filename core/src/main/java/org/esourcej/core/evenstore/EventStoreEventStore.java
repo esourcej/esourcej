@@ -37,7 +37,7 @@ public class EventStoreEventStore implements EventStore {
         Function<Event, EventData> mapper = e -> EventData
                 .newBuilder()
                 .type("DomainEvent")
-                .jsonData(serializer.serialize(e))
+                .data(serializer.serialize(e))
                 .build();
 
         List<EventData> data = events.stream().map(mapper).collect(Collectors.toList());
