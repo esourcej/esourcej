@@ -20,6 +20,6 @@
     </build>
     <modules>
         <module>core</module>
-        <module>serializer-protobuf</module>
+        <module>esourcej-serializer-protobuf</module>
     </modules>
 </project>
