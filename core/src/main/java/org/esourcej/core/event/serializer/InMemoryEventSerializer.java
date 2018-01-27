@@ -14,16 +14,14 @@ public class InMemoryEventSerializer implements EventSerializer {
     }
 
     @Override
-    public String serialize(Event event) {
+    public byte[] serialize(Event event) {
         events.add(event);
 
-        String serializedEvent = String.valueOf(events.size() - 1);
-
-        return serializedEvent;
+        return String.valueOf(events.size() - 1).getBytes();
     }
 
     @Override
-    public Event deserialize(String serializedEvent) {
-        return events.get(Integer.parseInt(serializedEvent));
+    public Event deserialize(byte[] serializedEvent) {
+        return events.get(Integer.parseInt(new String(serializedEvent)));
     }
 }

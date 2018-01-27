@@ -19,7 +19,7 @@ public class InMemoryEventSerializerTest {
     public void serializeAndDeserialize() throws Exception {
         Event event = new Event(){};
 
-        String serializedEvent = serializer.serialize(event);
+        byte[] serializedEvent = serializer.serialize(event);
 
         Event deserializedEvent = serializer.deserialize(serializedEvent);
 

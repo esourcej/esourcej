@@ -10,6 +10,8 @@ import java.io.IOException;
 public class JacksonEventSerializer implements EventSerializer {
     ObjectMapper mapper;
 
+    private static final byte[] EMPTY_DATA = {};
+
     private Class eventClass;
 
     public JacksonEventSerializer(ObjectMapper mapper, Class eventClass) {
@@ -18,18 +20,18 @@ public class JacksonEventSerializer implements EventSerializer {
     }
 
     @Override
-    public String serialize(Event event) {
+    public byte[] serialize(Event event) {
         try {
-            return mapper.writeValueAsString(event);
+            return mapper.writeValueAsBytes(event);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
 
-            return "";
+            return EMPTY_DATA;
         }
     }
 
     @Override
-    public Event deserialize(String serializedEvent) {
+    public Event deserialize(byte[] serializedEvent) {
         try {
             return (Event) mapper.readValue(serializedEvent, eventClass);
         } catch (IOException e) {

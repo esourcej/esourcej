@@ -62,7 +62,7 @@ public class JacksonEventSerializerTest {
 
         event.setPayload(moneyWithdrawn);
 
-        String serializedEvent = serializer.serialize(event);
+        byte[] serializedEvent = serializer.serialize(event);
 
         Event deserializedEvent = serializer.deserialize(serializedEvent);
 

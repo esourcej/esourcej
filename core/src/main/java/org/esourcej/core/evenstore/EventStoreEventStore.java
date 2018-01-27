@@ -66,7 +66,7 @@ public class EventStoreEventStore implements EventStore {
         String streamName = buildStreamName(aggregateName, aggregateId);
 
         List<Event> events = eventStore.streamEventsForward(streamName, fromVersion, 5, false)
-                .map(resolvedEvent -> new String(resolvedEvent.originalEvent().data, StandardCharsets.UTF_8))
+                .map(resolvedEvent -> resolvedEvent.originalEvent().data)
                 .map(eventData -> serializer.deserialize(eventData))
                 .collect(Collectors.toList());
 
