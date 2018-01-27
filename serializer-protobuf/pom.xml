@@ -13,7 +13,7 @@
     <groupId>org.esourcej.event.serializer.protobuf</groupId>
     <packaging>jar</packaging>
     <version>0.0-SNAPSHOT</version>
-    <name>esourcej-core</name>
+    <name>esourcej-serializer-protobuf</name>
     <dependencies>
         <dependency>
             <groupId>com.google.protobuf</groupId>
